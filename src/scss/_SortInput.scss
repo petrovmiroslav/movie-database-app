@@ -1,5 +1,6 @@
 .sort {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   margin: 1rem 0;
   padding: 2rem;
   appearance: none;
@@ -7,6 +8,10 @@
   border-radius: 1rem;
   background: var(--gray-blue);
   font-size: 1.6rem;
+
+  @include breakpointMF(small-tablet) {
+    display: inline-block;
+  }
 }
 .sort__select-input {
   margin-top: 1rem;
