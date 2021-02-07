@@ -2,7 +2,8 @@ import React from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route
+  Route,
+  Redirect
 } from "react-router-dom";
 import HomePage from './HomePage';
 import MoviePage from './MoviePage';
@@ -91,9 +92,9 @@ class App extends React.Component {
               favourites={this.state.favourites}
               favouritesActions={this.state.favouritesActions}/>
           </Route>
-          
+          <Redirect to='/'/>
           {/* routing for github.io */}
-          <Route path="/movie-database-app/dist/movie/:id">
+          {/* <Route path="/movie-database-app/dist/movie/:id">
             <MoviePage 
               apiKey={this.state.apiKey} 
               favourites={this.state.favourites}
@@ -104,7 +105,7 @@ class App extends React.Component {
               apiKey={this.state.apiKey}
               favourites={this.state.favourites}
               favouritesActions={this.state.favouritesActions}/>
-          </Route>
+          </Route> */}
         </Switch>
       </Router>
     );
