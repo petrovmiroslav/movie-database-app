@@ -1,0 +1,56 @@
+.filter {
+  display: block;
+  margin: 1rem 0;
+  padding: 2rem;
+  appearance: none;
+  border: 0;
+  border-radius: 1rem;
+  background: var(--gray-blue);
+}
+.filter__legend-wrapper {
+  overflow: hidden;
+}
+.filter__legend {
+  display: block;
+  width: 100%;
+  float: left;
+  font-size: 2.4rem;
+}
+.filter__genres-container {
+  margin-top: 1rem;
+
+  @include breakpointMF(small-tablet) {
+    columns: 5;
+  }
+}
+.filter__label {
+  display: block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.filter__label-text {
+  display: inline-block;
+  vertical-align: middle;
+}
+.filter__checkbox {
+  display: inline-block;
+  width: auto;
+  margin-left: 1rem;
+  vertical-align: middle;
+}
+.filter__button {
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 1rem;
+
+  &:hover {
+    opacity: 0.6;
+  }
+  &:active {
+    opacity: 1;
+  }
+}

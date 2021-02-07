@@ -1,0 +1,117 @@
+.movie-page__container {
+  min-height: 100vh;
+  padding-bottom: 6rem;
+  position: relative;
+}
+.movie-page {
+  border-radius: 1rem;
+  color: var(--primary-color);
+  overflow: hidden;
+
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    background: var(--gray-blue);
+  }
+}
+.movie-page__link-back {
+  display: inline-block;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--soft-red);
+  font-size: 2rem;
+  color: white;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+.movie-page__backdrop {
+  display: none;
+
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    justify-content: center;
+    z-index: -1;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    flex-shrink: 0;
+    background-color: black;
+    opacity: 0.8;
+  }
+}
+.movie-page__backdrop-img {
+  width: 100vw;
+  max-width: unset;
+  height: 100%;
+  flex-shrink: 0;
+  @include objectFitCover;
+}
+.movie-page__poster-wrapper {
+  @include breakpointMF(small-tablet) {
+    flex: 0 0 33.3333%;
+    min-height: 68rem;
+  }
+}
+.movie-page__img {
+  width: 100%;
+  height: 100%;
+  @include objectFitCover;
+}
+.movie-page__content {
+  margin-top: 2rem;
+  font-size: 2.6rem;
+  line-height: 2.8rem;
+
+  @include breakpointMF(small-tablet) {
+    flex: 1 1 auto;
+    margin-top: 0;
+    padding: 3rem;
+  }
+}
+.movie-page__title {
+  margin-bottom: 2rem;
+  font-size: 4.5rem;
+  line-height: 4.8rem;
+}
+.movie-page__row {
+  @include breakpointMF(small-tablet) {
+    display: flex;
+  }
+}
+.movie-page__left-column {
+  
+  @include breakpointMF(small-tablet) {
+    flex: 1 1 auto;
+  }
+}
+.movie-page__right-column {
+  
+  @include breakpointMF(small-tablet) {
+    flex: 0 0 auto;
+  }
+}
+.movie-page__favourite-button {
+  margin-left: -1rem;
+  margin-bottom: 0;
+
+  @include breakpointMF(small-tablet) {
+    margin-top: -1rem;
+    margin-left: 0;
+  }
+}
+.movie-page__overview {
+  margin-bottom: 1rem;
+}
