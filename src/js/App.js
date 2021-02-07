@@ -93,19 +93,6 @@ class App extends React.Component {
               favouritesActions={this.state.favouritesActions}/>
           </Route>
           <Redirect to='/'/>
-          {/* routing for github.io */}
-          {/* <Route path="/movie-database-app/dist/movie/:id">
-            <MoviePage 
-              apiKey={this.state.apiKey} 
-              favourites={this.state.favourites}
-              favouritesActions={this.state.favouritesActions}/>
-          </Route>
-          <Route exact path="/movie-database-app/dist/">
-            <HomePage 
-              apiKey={this.state.apiKey}
-              favourites={this.state.favourites}
-              favouritesActions={this.state.favouritesActions}/>
-          </Route> */}
         </Switch>
       </Router>
     );
